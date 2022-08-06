@@ -1,6 +1,6 @@
 {
   "name": "react-hooks-lifecycle",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "React Lifecyle Hooks",
   "main": "index.js",
   "scripts": {
@@ -27,5 +27,13 @@
     "ts-jest": "^28.0.7",
     "ts-node": "^10.9.1",
     "typescript": "^4.7.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valerianomacuri/react-hooks-lifecycle.git"
+  },
+  "bugs": {
+    "url": "https://github.com/valerianomacuri/react-hooks-lifecycle/issues"
+  },
+  "homepage": "https://github.com/valerianomacuri/react-hooks-lifecycle#readme"
 }
