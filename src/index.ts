@@ -1,5 +1,12 @@
 //* remover el strict mode para poder apreciar el correcto funcionamiento en React 18
-import { DependencyList, useEffect, useRef } from "react";
+import { DependencyList, EffectCallback, useEffect, useRef } from "react";
+
+//* componentWillMount
+export const useBeforeMount = (handler: () => void) => {
+  const willMount = useRef<boolean>(true);
+  if (willMount.current) handler();
+  willMount.current = false;
+};
 
 //* componentDidMount
 export const useMounted = (effect: () => void) => {
@@ -29,6 +36,7 @@ export const useUpdated = (effect: () => void, deps: DependencyList) => {
   }, deps);
 };
 
+//* componentWillUpdate
 export const useBeforeUpdate = (effect: () => void, deps: DependencyList) => {
   const isLastRender = useRef(false);
 
